@@ -1,0 +1,14 @@
+//
+//  Item.swift
+//  Todoey
+//
+//  Created by muhammad Awais on 7/11/19.
+//  Copyright © 2019 muhammad Awais. All rights reserved.
+//
+
+import Foundation
+
+class Item {
+    var title : String = ""
+    var done : Bool = false
+}
