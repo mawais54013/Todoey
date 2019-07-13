@@ -20,10 +20,10 @@ class TodoListViewController: UITableViewController {
         super.viewDidLoad()
         
 //        arrayTitle.append("text")
-//
 //        print(arrayTitle[0]);
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist"))
+        
         
         loadItems()
 
@@ -94,7 +94,6 @@ class TodoListViewController: UITableViewController {
     func savedItems() {
         
         do {
-            
             try context.save()
         } catch {
             print("Error saving context \(error)")
@@ -103,14 +102,29 @@ class TodoListViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func loadItems() {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
+    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
+
         do {
             itemArray = try context.fetch(request)
         } catch {
             print("Error fetching data \(error)")
         }
+        tableView.reloadData()
     }
     
+}
+
+//MARK: - Search Bar Method
+extension TodoListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadItems(with: request)
+        
+    }
 }
 
