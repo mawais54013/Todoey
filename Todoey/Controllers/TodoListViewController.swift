@@ -12,12 +12,18 @@ class TodoListViewController: UITableViewController {
 
     var itemArray = [Item]()
     
+    var arrayTitle = [String]()
+    
+    
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        arrayTitle.append("text")
+//
+//        print(arrayTitle[0]);
         
         loadItems()
 //        if let items = defaults.array(forKey: "TodoListArray") as? [Item] {
