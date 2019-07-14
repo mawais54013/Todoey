@@ -19,12 +19,12 @@ class TodoListViewController: UITableViewController {
         }
     }
     
-    var arrayTitle = [String]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//    var arrayTitle = [String]()
 //        arrayTitle.append("text")
 //        print(arrayTitle[0]);
         
