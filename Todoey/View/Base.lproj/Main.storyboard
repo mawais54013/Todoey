@@ -78,9 +78,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="bfI-AX-N3p">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Test" id="eUh-vq-fwn">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kaG-PR-EW5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>

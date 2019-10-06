@@ -14,6 +14,8 @@ class TodoListViewController: UITableViewController {
     var todoItems: Results<Item>?
     let realm = try! Realm()
     
+    var editingMode = false
+    
     var selectedCategory : Category? {
         didSet{
             loadItems()
@@ -72,8 +74,8 @@ class TodoListViewController: UITableViewController {
         tableView.reloadData()
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
+    
     
     //MARK - Add new items
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -114,7 +116,7 @@ class TodoListViewController: UITableViewController {
         todoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
         tableView.reloadData()
     }
-
+    
 }
 
 //MARK: - Search Bar Method
