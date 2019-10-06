@@ -1,4 +1,3 @@
-
 platform :ios, '9.0'
 
 target 'Todoey' do
@@ -8,5 +7,6 @@ target 'Todoey' do
   # Pods for Todoey
 
 pod 'RealmSwift'
+pod 'SwipeCellKit'
 
 end
