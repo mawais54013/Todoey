@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todoey-->
+        <!--Do It!-->
         <scene sceneID="9SU-Zh-z0G">
             <objects>
                 <tableViewController id="Wiy-ae-Wm1" customClass="CategoryViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="Wiy-ae-Wm1" id="yQw-pE-m1U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey" id="Ztv-h4-64Z">
+                    <navigationItem key="navigationItem" title="Do It!" id="Ztv-h4-64Z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wOq-PK-OSO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
