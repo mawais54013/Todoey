@@ -48,9 +48,6 @@ class TodoListViewController: SwipeTableViewController {
             }
             
             searchBar.barTintColor = UIColor(hexString: colourHex)
-//            guard let navBar = navigationController?.navigationBar else {fatalError("Navigation controller does not exist")}
-//            
-//            navBar.barTintColor = UIColor(hexString: colourHex)
         }
     }
 
@@ -89,8 +86,6 @@ class TodoListViewController: SwipeTableViewController {
             do {
                 try realm.write {
                     item.done = !item.done
-//                    delete code below
-//                    realm.delete(item)
                 }
             }
             catch {
